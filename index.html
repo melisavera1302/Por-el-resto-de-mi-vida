@@ -1,29 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Por el resto de mi vida
+</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="estilo.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+
+<section id="bienvenida">
+
+<div class="contenido">
+
+<h3>
 M & M
+</h3>
+
+<div class="sobre">
+
+<div class="sello">
+
+M & M
+
+</div>
+
+</div>
+
+<p>
 
 Toca el sello para abrir la invitación
 
+</p>
+
+<button id="abrirInvitacion">
+
+Abrir invitación
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<section
+id="versiculo"
+class="oculto">
+
+<div class="contenido">
+
+<h2>
+
+El amor
+
+</h2>
+
+<p class="biblia">
+
+"El amor es paciente, es bondadoso.
+
+El amor no es envidioso ni jactancioso
+
+ni orgulloso.
+
+No se comporta con rudeza,
+
+no es egoísta,
+
+no se enoja fácilmente,
+
+no guarda rencor.
+
+El amor no se deleita en la maldad,
+
+sino que se regocija con la verdad.
+
+Todo lo disculpa,
+
+todo lo cree,
+
+todo lo espera,
+
+todo lo soporta."
+
+</p>
+
+<span>
+
 1 Corintios 13:4-7
 
-El amor es paciente, es bondadoso. El amor no es envidioso ni jactancioso ni orgulloso. No se comporta con rudeza, no es egoísta, no se enoja fácilmente, no guarda rencor. El amor no se deleita en la maldad, sino que se regocija con la verdad. Todo lo disculpa, todo lo cree, todo lo espera, todo lo soporta.
+</span>
 
+<div class="musica">
 
-Manuel y Melisa
-Manuel Yesquín & Melisa Vera
+<button id="musica">
 
-12 de diciembre de 2026
+🎵 Escuchar nuestra canción
 
-Ceremonia
+</button>
 
-Seminario San Alfonso
-4:30 p.m.
+</div>
 
-Ver ubicación
-Recepción
+</div>
 
-Club Eventos Maravillosos Campestre
-6:30 p.m.
+</section>
+<!-- ============================= -->
+<!-- NUESTRA HISTORIA -->
+<!-- ============================= -->
 
-Ver ubicación
-Confirmar asistencia
+<section id="historia">
 
-Abrir formulario
+    <div class="contenido">
+
+        <h2>
+            Por el resto de mi vida
+        </h2>
+
+        <p class="frase">
+
+            "Hay historias que comienzan con un simple encuentro,
+            pero existen amores que Dios escribe desde mucho antes.
+            Hoy queremos compartir con ustedes el inicio
+            del capítulo más importante de nuestras vidas."
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ============================= -->
+<!-- FOTOGRAFÍA -->
+<!-- ============================= -->
+
+<section id="fotografia">
+
+    <img
+    src="img/foto-principal.jpg"
+    alt="Manuel y Melisa">
+
+    <h2>
+
+        Manuel Yesquín
+
+        <br>
+
+        &
+
+        <br>
+
+        Melisa Vera
+
+    </h2>
+
+    <h3>
+
+        12 de diciembre de 2026
+
+    </h3>
+
+</section>
+<!-- ============================= -->
+<!-- CEREMONIA Y RECEPCIÓN -->
+<!-- ============================= -->
+
+<section id="eventos">
+
+    <h2>Nuestro gran día</h2>
+
+    <div class="evento">
+
+        <h3>⛪ Ceremonia</h3>
+
+        <h4>Seminario San Alfonso</h4>
+
+        <p>4:30 P.M.</p>
+
+        <p>Km. 6 vía Piedecuesta</p>
+
+        <a
+        href="https://maps.google.com"
+        target="_blank">
+
+        Ver ubicación
+
+        </a>
+
+    </div>
+
+    <div class="evento">
+
+        <h3>🥂 Recepción</h3>
+
+        <h4>Club Eventos Maravillosos Campestre</h4>
+
+        <p>6:30 P.M.</p>
+
+        <p>Piedecuesta</p>
+
+        <a
+        href="https://maps.google.com"
+        target="_blank">
+
+        Ver ubicación
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ============================= -->
+<!-- CUENTA REGRESIVA -->
+<!-- ============================= -->
+
+<section id="contador">
+
+    <h2>Faltan...</h2>
+
+    <div class="cuenta">
+
+        <div class="tiempo">
+            <span id="dias">0</span>
+            <small>Días</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="horas">0</span>
+            <small>Horas</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="minutos">0</span>
+            <small>Minutos</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="segundos">0</span>
+            <small>Segundos</small>
+        </div>
+
+    </div>
+
+</section>
+<!-- ============================= -->
+<!-- CÓDIGO DE VESTIMENTA -->
+<!-- ============================= -->
+
+<section id="dresscode">
+
+    <h2>Código de vestimenta</h2>
+
+    <p>
+        Nos encantará compartir este día con ustedes.
+        Hemos elegido una celebración elegante, por lo que
+        agradecemos asistir con vestimenta formal.
+    </p>
+
+    <div class="dress-container">
+
+        <div class="dress-card">
+
+            <h3>🤵 Caballeros</h3>
+
+            <p>Traje formal en tonos oscuros.</p>
+
+            <a href="https://pin.it/6SZr8t8k5" target="_blank">
+                Ver inspiración
+            </a>
+
+        </div>
+
+        <div class="dress-card">
+
+            <h3>👗 Damas</h3>
+
+            <p>Vestido largo formal.</p>
+
+            <a href="https://pin.it/749U8Qijk" target="_blank">
+                Ver inspiración
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ============================= -->
+<!-- CONFIRMACIÓN -->
+<!-- ============================= -->
+
+<section id="confirmacion">
+
+    <h2>Confirma tu asistencia</h2>
+
+    <p>
+        Tu presencia hará de este día un recuerdo inolvidable.
+        Agradecemos confirmar tu asistencia antes del
+        <strong>15 de noviembre de 2026.</strong>
+    </p>
+
+    <a class="btn-confirmar"
+       href="https://forms.gle/RbJANy9X67c1j6k18"
+       target="_blank">
+
+       Confirmar asistencia
+
+    </a>
+
+</section>
+
+<!-- ============================= -->
+<!-- MENSAJE FINAL -->
+<!-- ============================= -->
+
+<section id="final">
+
+    <h2>Los esperamos con mucho cariño</h2>
+
+    <p>
+
+        Gracias por acompañarnos en el inicio de la aventura
+        más importante de nuestras vidas.
+
+        Su presencia será el regalo más valioso que podremos recibir.
+
+    </p>
+
+    <h3>
+
+        Con amor,
+
+        <br><br>
+
+        Manuel Yesquín
+
+        <br>
+
+        &
+
+        <br>
+
+        Melisa Vera
+
+    </h3>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
