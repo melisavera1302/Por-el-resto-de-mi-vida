@@ -1,38 +1,110 @@
-// ================================
-// INVITACIÓN "POR EL RESTO DE MI VIDA"
+// =======================================
+// INVITACIÓN MANUEL & MELISA
 // Build 1.0
-// ================================
+// =======================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Invitación iniciada");
+const fechaBoda = new Date("December 12, 2026 16:30:00").getTime();
 
-    // Animación de aparición
-    const secciones = document.querySelectorAll("section");
+const dias = document.getElementById("dias");
+const horas = document.getElementById("horas");
+const minutos = document.getElementById("minutos");
+const segundos = document.getElementById("segundos");
 
-    const observer = new IntersectionObserver((entries)=>{
+function actualizarContador(){
 
-        entries.forEach(entry=>{
+const ahora = new Date().getTime();
 
-            if(entry.isIntersecting){
+const diferencia = fechaBoda - ahora;
 
-                entry.target.style.opacity="1";
-                entry.target.style.transform="translateY(0)";
+const d = Math.floor(diferencia/(1000*60*60*24));
 
-            }
+const h = Math.floor((diferencia%(1000*60*60*24))/(1000*60*60));
 
-        });
+const m = Math.floor((diferencia%(1000*60*60))/(1000*60));
 
-    },{threshold:.15});
+const s = Math.floor((diferencia%(1000*60))/1000);
 
-    secciones.forEach(sec=>{
+if(dias) dias.textContent=d;
+if(horas) horas.textContent=h;
+if(minutos) minutos.textContent=m;
+if(segundos) segundos.textContent=s;
 
-        sec.style.opacity="0";
-        sec.style.transform="translateY(40px)";
-        sec.style.transition=".8s";
+}
 
-        observer.observe(sec);
+setInterval(actualizarContador,1000);
 
-    });
+actualizarContador();
+    // =======================================
+// BOTÓN DE MÚSICA
+// =======================================
+
+const botonMusica = document.getElementById("musica");
+
+const audio = new Audio("audio/por-el-resto-de-mi-vida.mp3");
+
+audio.preload = "auto";
+
+let reproduciendo = false;
+
+if(botonMusica){
+
+botonMusica.addEventListener("click",()=>{
+
+if(!reproduciendo){
+
+audio.currentTime = 53;
+
+audio.play();
+
+botonMusica.innerHTML="⏸ Pausar música";
+
+reproduciendo=true;
+
+}else{
+
+audio.pause();
+
+botonMusica.innerHTML="🎵 Escuchar nuestra canción";
+
+reproduciendo=false;
+
+}
+
+});
+
+}
+// =======================================
+// ANIMACIONES SUAVES
+// =======================================
+
+const secciones = document.querySelectorAll("section");
+
+const observador = new IntersectionObserver((entradas)=>{
+
+entradas.forEach((entrada)=>{
+
+if(entrada.isIntersecting){
+
+entrada.classList.add("visible");
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+secciones.forEach((seccion)=>{
+
+observador.observe(seccion);
+
+});
+
+// =======================================
+// FIN DEL SCRIPT
+// =======================================
 
 });
