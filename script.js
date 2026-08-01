@@ -1,8 +1,34 @@
-// =======================================
-// INVITACIÓN MANUEL & MELISA
-// Build 1.0
-// =======================================
+    // =======================================
+    // PORTADA / ABRIR INVITACIÓN
+    // =======================================
+    const cover = document.getElementById("cover");
+    const abrirBtn = document.getElementById("abrirInvitacion");
+    const seal = document.querySelector(".seal");
 
+    function abrirInvitacion() {
+        if (cover) {
+            cover.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+            cover.style.opacity = "0";
+            cover.style.transform = "translateY(-30px)";
+            setTimeout(() => {
+                cover.style.display = "none";
+            }, 800);
+        }
+
+        // Intenta reproducir la música al abrir la invitación
+        if (!reproduciendo) {
+            audio.currentTime = 53;
+            audio.play().then(() => {
+                reproduciendo = true;
+                if(botonMusica) botonMusica.innerHTML = "⏸ Pausar música";
+            }).catch(error => {
+                console.log("El navegador requiere interacción manual para el audio:", error);
+            });
+        }
+    }
+
+    if (abrirBtn) abrirBtn.addEventListener("click", abrirInvitacion);
+    if (seal) seal.addEventListener("click", abrirInvitacion);
 document.addEventListener("DOMContentLoaded", () => {
 
 const fechaBoda = new Date("December 12, 2026 16:30:00").getTime();
