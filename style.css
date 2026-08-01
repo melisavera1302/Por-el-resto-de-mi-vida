@@ -528,9 +528,9 @@ RESPONSIVE Y ANIMACIONES
 
 section{
 
-opacity:0;
+opacity:1;
 
-transform:translateY(40px);
+transform:none;
 
 transition:all .8s ease;
 
