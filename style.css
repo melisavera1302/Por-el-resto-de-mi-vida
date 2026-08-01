@@ -171,3 +171,503 @@ transition:.35s;
 transform:translateY(-4px);
 
 }
+/* ===========================
+VERSÍCULO
+=========================== */
+
+#verse{
+
+background:white;
+
+border-radius:30px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+margin-top:80px;
+
+}
+
+#verse p{
+
+font-size:28px;
+
+font-style:italic;
+
+line-height:2;
+
+margin:35px auto;
+
+max-width:760px;
+
+}
+
+#verse h4{
+
+font-size:24px;
+
+color:var(--azul);
+
+margin-bottom:35px;
+
+font-weight:500;
+
+}
+
+#musica{
+
+background:var(--azul);
+
+color:white;
+
+padding:18px 42px;
+
+border-radius:50px;
+
+font-size:18px;
+
+transition:.35s;
+
+}
+
+#musica:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 35px rgba(31,49,93,.25);
+
+}
+
+/* ===========================
+HISTORIA
+=========================== */
+
+#story{
+
+padding-top:120px;
+
+padding-bottom:120px;
+
+}
+
+#story p{
+
+max-width:760px;
+
+}
+
+/* ===========================
+FOTOGRAFÍA
+=========================== */
+
+#photo img{
+
+width:100%;
+
+max-width:560px;
+
+border-radius:24px;
+
+border:8px solid white;
+
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+margin-bottom:35px;
+
+}
+
+#photo h3{
+
+margin-top:15px;
+
+font-size:26px;
+
+}
+/* ===========================
+CUENTA REGRESIVA
+=========================== */
+
+#countdown{
+
+padding-top:100px;
+
+}
+
+.count{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.count-box{
+
+width:120px;
+
+height:120px;
+
+background:var(--azul);
+
+color:white;
+
+border-radius:22px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 18px 40px rgba(31,49,93,.18);
+
+}
+
+.count-box span{
+
+font-size:42px;
+
+font-weight:700;
+
+}
+
+.count-box small{
+
+margin-top:8px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+font-size:12px;
+
+}
+
+/* ===========================
+EVENTOS
+=========================== */
+
+#events{
+
+display:flex;
+
+flex-direction:column;
+
+gap:35px;
+
+}
+
+.event-card{
+
+background:white;
+
+padding:40px;
+
+border-radius:24px;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+}
+
+.event-card h3{
+
+margin-bottom:15px;
+
+}
+
+.map-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:14px 34px;
+
+background:var(--azul);
+
+color:white;
+
+border-radius:40px;
+
+transition:.35s;
+
+}
+
+.map-btn:hover{
+
+transform:translateY(-3px);
+
+}
+/* ===========================
+DRESS CODE
+=========================== */
+
+.dress-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:45px;
+
+}
+
+.dress-card{
+
+background:white;
+
+padding:40px 30px;
+
+border-radius:24px;
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.dress-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.dress-card h3{
+
+margin-bottom:18px;
+
+}
+
+.dress-card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:14px 34px;
+
+border-radius:40px;
+
+background:var(--azul);
+
+color:white;
+
+}
+
+/* ===========================
+CONFIRMACIÓN
+=========================== */
+
+#rsvp{
+
+padding-top:110px;
+
+}
+
+.rsvp-btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:18px 45px;
+
+background:var(--azul);
+
+color:white;
+
+border-radius:50px;
+
+font-size:20px;
+
+transition:.35s;
+
+}
+
+.rsvp-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 18px 35px rgba(31,49,93,.20);
+
+}
+
+/* ===========================
+FINAL
+=========================== */
+
+#final{
+
+padding-bottom:120px;
+
+}
+
+#final h3{
+
+font-family:"Great Vibes",cursive;
+
+font-size:62px;
+
+margin-top:35px;
+
+color:var(--azul);
+
+}
+/* ===========================
+RESPONSIVE Y ANIMACIONES
+=========================== */
+
+section{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+section.visible{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+@media(max-width:768px){
+
+h1{
+
+font-size:54px;
+
+line-height:1.2;
+
+}
+
+h2{
+
+font-size:32px;
+
+}
+
+h3{
+
+font-size:24px;
+
+}
+
+p{
+
+font-size:19px;
+
+}
+
+section{
+
+padding:70px 18px;
+
+}
+
+#cover{
+
+padding:30px;
+
+}
+
+.overlay h3{
+
+font-size:42px;
+
+letter-spacing:8px;
+
+}
+
+.seal{
+
+width:95px;
+
+height:95px;
+
+font-size:32px;
+
+}
+
+#photo img{
+
+max-width:100%;
+
+}
+
+.count{
+
+gap:12px;
+
+}
+
+.count-box{
+
+width:85px;
+
+height:85px;
+
+}
+
+.count-box span{
+
+font-size:28px;
+
+}
+
+.event-card{
+
+padding:25px;
+
+}
+
+.dress-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.rsvp-btn,
+.map-btn,
+.dress-card a,
+#abrirInvitacion,
+#musica{
+
+width:100%;
+
+max-width:320px;
+
+display:block;
+
+margin:20px auto 0;
+
+text-align:center;
+
+}
+
+}
+
+html{
+
+overflow-x:hidden;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
